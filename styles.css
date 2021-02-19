@@ -1,0 +1,319 @@
+/* RESET */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    outline: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* THEME */
+
+:root {
+    --dark-1: hsl(0, 16%, 4%);
+    --dark-2: hsl(0, 16%, 8%);
+    --dark-3: hsl(0, 16%, 12%);
+    --blue-1: hsl(202, 91%, 44%);
+    --blue-2: hsl(202, 91%, 64%);
+    --orange-1: hsl(30, 96%, 48%);
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--orange-1);
+    background-color: var(--dark-1);
+}
+
+/* LAYOUT */
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-width: 480px) {
+    body {
+        padding-top: 20px;
+    }
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 30px;
+    }
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* COMPONENTS */
+
+.button {
+    display: inline-block;
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 13px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blue-1);
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid var(--blue-1);
+    transition: 0.1s;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: var(--blue-1);
+    border: 1px solid var(--blue-1);
+}
+
+i {
+    font-size: 16px;
+    color: #1cb11c;
+}
+
+/* HEADER */
+
+header {
+    margin: 10px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin-bottom: 30px;
+    color: #e6d4c3;
+    text-shadow: 0 0 1px var(--orange-1), 0 0 2px var(--orange-1), 0 0 2px var(--orange-1), 0 0 2px var(--orange-1), 0 0 8px var(--orange-1);
+}
+
+header a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #0A0A0A;
+    background-color: var(--orange-1);
+    border-radius: 3px;
+    border: 1px solid var(--orange-1);
+    transition: 0.1s;
+}
+
+header a:hover {
+    color: var(--orange-1);
+    background-color: transparent;
+    border: 1px solid var(--orange-1);
+}
+
+/* FOOTER */
+
+footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* FORM */
+
+form {
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+
+.input-group input[type=text] {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 3px;
+    border: 1px solid var(--orange-1);
+    background-color: transparent;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    color: var(--orange-1);
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    border: 1px solid var(--orange-1);
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type=checkbox] {
+    appearance: none;
+    margin: 0;
+    margin-right: 5px;
+    padding: 6px;
+    border: 1px solid var(--orange-1);
+    border-radius: 2px;
+}
+
+.checkbox-group input[type=checkbox]:active {
+    background-color: var(--orange-1);
+}
+
+.checkbox-group input[type=checkbox]:checked {
+    background-color: var(--orange-1);
+}
+
+/* INFO */
+
+.info {
+    margin-bottom: 40px;
+}
+
+.info a {
+    color: var(--blue-1);
+}
+
+/* STAR SYSTEM */
+
+.star-systems {
+    margin-bottom: 30vh;
+}
+
+.star-system {
+    margin-bottom: 10px;
+    border-radius: 10px 0 10px 0;
+    border: 2px solid var(--orange-1);
+    overflow: hidden;
+    background-color: var(--dark-2)
+}
+
+.star-system:hover {
+    background-color: var(--dark-3)
+}
+
+.star-system .card-header {
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+}
+
+.star-system .card-header h3 {
+    font-weight: 800;
+}
+
+.star-system .card-header .number {
+    width: 40px;
+    padding: 5px 0;
+    padding-right: 2px;
+    font-size: 16px;
+    color: #0A0A0A;
+    background-color: var(--orange-1);
+    border-radius: 0 0 10px 0;
+}
+
+.star-system .card-header .name {
+    padding: 5px 10px;
+    text-align: start;
+    font-size: 16px;
+}
+
+.star-system .card-header .jump i {
+    display: block;
+    color: var(--orange-1);
+}
+
+.star-system .card-content {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+}
+
+.star-system .card-content .planets {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.star-system .card-content .visited {
+    display: flex;
+    align-self: end;
+}
+
+.star-system .card-content .visited a {
+    width: 100%;
+    cursor: pointer;
+    text-align: end;
+}
+
+.star-system .card-content .visited .active {
+    color: #1cb11c;
+}
+
+.star-system .card-content .visited .inactive {
+    color: var(--orange-1);
+}
+
+.star-system .card-content h4 {
+    font-weight: 800;
+}
+
+@media (min-width: 800px) {
+    .star-system {
+        max-width: initial;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .star-system .card-content {
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 100%;
+        padding: 5px 10px 10px 10px;
+    }
+    .star-system .card-content .planets {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .star-system .card-content .visited {
+        align-self: initial;
+    }
+}

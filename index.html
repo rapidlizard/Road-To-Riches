@@ -1,0 +1,575 @@
+<html>
+
+<head>
+    <title>Road To Riches</title>
+    <link rel="shortcut icon" href="/ico/expl.png" type="image/png">
+    <link rel="icon" href="/ico/expl.png" type="image/png">
+    <link rel="apple-touch-icon" href="/ico/expl.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="container">
+        <h1>Road to Riches</h1>
+        <nav>
+            <a href="">Pristines</a>
+            <a href="">Rares</a>
+            <a href="">RES</a>
+            <a href="">Distances</a>
+            <a href="">Miner's Tool</a>
+            <a href="">Sphere</a>
+            <a href="">List</a>
+            <a href="">Road to Riches</a>
+            <a href="">Selenium</a>
+            <a href="">Massacre</a>
+            <a href="">Hotspots</a>
+        </nav>
+    </header>
+    <main class="container">
+        <form>
+            <div class="input-group">
+                <label for="">Starting System</label>
+                <input type="text" name="s" placeholder="Start system" value="Lao Jun">
+            </div>
+
+            <div class="input-group">
+                <label for="">Max distance from start</label>
+                <select name="d">
+                    <option value="200" selected="selected">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="">Max systems in route</label>
+                <select name="n">
+                    <option value="300" selected="selected">300</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                </select>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" name="x">
+                <label for="">Results in plain text</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" name="ap" checked>
+                <label for="">Include unexplored populated systems</label>
+            </div>
+            <input type="submit" class="button" value="Get Route">
+        </form>
+
+        <section class="info">
+            <h3 class="rd">New: <a href="?a=v" class="bl nd">Straight Line Mode</a> </h3>
+            <p>Start system: <strong>Lao Jun</strong></p>
+            <p>Systems within 200 ly: <strong>485</strong> out of <strong>9081</strong></p>
+            <p>The route has <strong>300</strong> systems with <strong>581</strong> planets</p>
+            <p>Populated systems are marked with <i class="bi bi-person-fill"></i></p>
+        </section>
+
+        <section class="star-systems">
+            <h2>Route:</h2>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="star-system">
+                <div class="card-header">
+                    <p class="number"><span>3</span></p>
+                    <h3 class="name" data-clipboard-text="Capricorni Sector MX-U c2-21">Capricorni Sector MX-U c2-21 <i
+                            class="bi bi-person-fill"></i></h3>
+                </div>
+                <div class="card-content">
+                    <div class="planets">
+                        <h4>Planets:</h4>
+                        <ul>
+                            <li>B2 (224 ls) TWW</li>
+                            <li>C6 (199'100 ls) TWW</li>
+                            <li>C7 (200'500 ls) TWW</li>
+                        </ul>
+                    </div>
+                    <div class="jump">
+                        <h4>Jump distance:</h4>
+                        <span class="jump">10.70ly</span>
+                    </div>
+                    <div class="visited">
+                        <h4>Visited:</h4>
+                        <a id="visit" class="active">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; CMDR VicTic, v. 1.25 (2020-04-09)</p>
+        <p>design by Rapid Lizard</p>
+    </footer>
+    <script>
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+    </script>
+</body>
+
+</html>
